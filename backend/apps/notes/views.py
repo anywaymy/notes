@@ -11,7 +11,6 @@ from . serializers import  NoteSerializer, NoteCreateSerializer, NoteUpdateSeria
 class NoteListCreateView(generics.ListCreateAPIView):
     # Представление для списка и создания заметок
     queryset = Note.objects.all()
-    serializer_class = NoteCreateSerializer
 
     def get_serializer_class(self):
         # Возвращает подходящий сериализатор в зависимости от метода запроса

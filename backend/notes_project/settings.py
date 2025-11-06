@@ -148,8 +148,8 @@ if DEBUG: # от фронтенда мы принимаем запросы по 
     CORS_ALLOW_ALL_ORIGINS = True # разрешаем все источники
 else:
     CORS_ALLOWED_ORIGINS = [ # разрешённые источники
-        'http://loaclhost:3000',
-        'http://17.0.0.1:3000',
+        'http://loaclhost:5173',
+        'http://17.0.0.1:5173',
     ]
 
 # Настройки безопасности
