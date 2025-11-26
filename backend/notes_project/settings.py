@@ -5,7 +5,7 @@ import os
 from email.policy import default
 from pathlib import Path
 from decouple import config
-from django.conf.global_settings import INSTALLED_APPS
+# from django.conf.global_settings import INSTALLED_APPS
 
 # Базовая директория проекта
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -135,9 +135,9 @@ REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_RATES': {
         'anon': '100/hour',  # Лимит запросов для анонимных пользователей
     },
-    'DEFAULT_RENDERER_CLASSES': [
-        'rest_framework.renderers.JSONRenderer',  # Рендеринг в JSON
-    ],
+    # 'DEFAULT_RENDERER_CLASSES': [
+    #     'rest_framework.renderers.JSONRenderer',  # Рендеринг в JSON
+    # ],
     'DEFAULT_PARSER_CLASSES': [
         'rest_framework.parsers.JSONParser',  # Парсинг JSON-данных
     ],
