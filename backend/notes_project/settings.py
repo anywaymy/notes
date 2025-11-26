@@ -81,15 +81,24 @@ WSGI_APPLICATION = 'notes_project.wsgi.application'
 # Конфигурация БД
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('POSTGRES_DB', default='newssite'),
-        'USER': config('POSTGRES_USER', default='newsuser'),
-        'PASSWORD': config('POSTGRES_PASSWORD'),
-        'HOST': config('DB_HOST', default='localhost'),
-        'PORT': config('DB_PORT', default='5432', cast=int),
-        'ATOMIC_REQUESTS': True,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+# Конфигурация БД
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': config('POSTGRES_DB', default='newssite'),
+#         'USER': config('POSTGRES_USER', default='newsuser'),
+#         'PASSWORD': config('POSTGRES_PASSWORD'),
+#         'HOST': config('DB_HOST', default='localhost'),
+#         'PORT': config('DB_PORT', default='5432', cast=int),
+#         'ATOMIC_REQUESTS': True,
+#     }
+# }
 
 # Валидаторы паролей
 AUTH_PASSWORD_VALIDATORS = [
