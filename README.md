@@ -57,12 +57,15 @@ python manage.py runserver
 
 Проверить работу API можно как через браузер, так и через приложение postman.
 
-Также можно ограничить доступ через браузер. В settings.py раскомментируйте строку ниже
+Также можно ограничить доступ через браузер. В settings.py закомментируйте строку ниже
 
 ```python
-'DEFAULT_RENDERER_CLASSES': [
-  'rest_framework.renderers.JSONRenderer',  # Рендеринг в JSON
-],
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer', # <-- закомментируйте
+    ],
+}
 ```
 
 ## ВАЖНО
